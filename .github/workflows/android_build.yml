@@ -26,3 +26,10 @@ jobs:
 
       - name: Build Project
         run: ./gradlew assemble
+
+      # Checkout Upload Apk
+      - name: Upload APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: Apk
+          path: app/build/outputs/apk/debug/app-debug.apk
